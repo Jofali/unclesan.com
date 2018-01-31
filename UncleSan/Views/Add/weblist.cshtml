@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "weblist";
+}
+
+<h2>weblist</h2>
+<div class="container">
+    <div class="input-group">
+        <span class="input-group-addon" id="Name">Name</span>
+        <input type="text" class="form-control" placeholder="Name" aria-describedby="Name" value="test">
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="Link">Link</span>
+        <input type="text" class="form-control" placeholder="Link" aria-describedby="Link" value="www.unclesan.com">
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="Slot">Slot</span>
+        <input type="text" class="form-control" placeholder="Slot" aria-describedby="Slot" value="js">
+    </div>
+    <button class="btn btn-primary" id="add">添加</button>
+</div>
+<script>
+    $(function () {
+        $("#add").click(function () {
+            $.ajax({
+                url: '/Add/InsertData',
+                dataType: 'json',
+                type: 'post',
+                data: {
+                    Name: $('.form-control').eq(0).val(),
+                    Link: $('.form-control').eq(1).val(),
+                    Slot: $('.form-control').eq(2).val()
+                },
+                success: function (data) {
+                    alert(data)
+                },
+                error: function (err1, err2, err3) {
+                    console.log(err2);
+                }
+            })
+        })
+    })
+</script>
