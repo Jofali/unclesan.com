@@ -49,7 +49,7 @@ namespace UncleSan.Models
         /// </summary>
         /// <param name="Name">用户名</param>
         /// <returns></returns>
-        public User GetLoginToken(string name)
+        public User GetLoginToken(string name)//GetUserInfo
         {
             using(IDbConnection conn = new SqlConnection(server))
             {
@@ -60,6 +60,7 @@ namespace UncleSan.Models
                 });
                 conn.Close();
                 int a = result.Count();
+<<<<<<< HEAD
                 if (a > 0)
                 {
                     return result.FirstOrDefault();
@@ -68,6 +69,17 @@ namespace UncleSan.Models
                 {
                     return null;
                 }
+=======
+                if (a == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    return result.FirstOrDefault();
+                }
+                
+>>>>>>> 6326b490c2164b44a1923ede2ff78cafa6f69dbc
             }
         }
     }
