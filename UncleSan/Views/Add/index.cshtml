@@ -4,11 +4,12 @@
 }
 
 <div class="container">
-    <div class="input-group">
+    <h2>登录信息</h2>
+    <div class="input-group" style="padding:20px 0 0 0;">
         <span class="input-group-addon" id="Name">用户名</span>
         <input type="text" class="form-control" placeholder="用户名" aria-describedby="Name">
     </div>
-    <div class="input-group">
+    <div class="input-group" style="padding:20px 0;">
         <span class="input-group-addon" id="Pwd">密码</span>
         <input type="password" class="form-control" placeholder="密码" aria-describedby="Pwd">
     </div>
@@ -16,7 +17,6 @@
 </div>
 <script>
     $(function () {
-        
         $("#login").click(function () {
             console.log($(".form-control").eq(0).val() + ":::" + $(".form-control").eq(1).val())
             $.ajax({
@@ -38,5 +38,4 @@
             })
         })
     })
-
 </script>

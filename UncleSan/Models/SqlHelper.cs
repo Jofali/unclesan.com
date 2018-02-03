@@ -60,7 +60,14 @@ namespace UncleSan.Models
                 });
                 conn.Close();
                 int a = result.Count();
-                return result.FirstOrDefault();
+                if (a > 0)
+                {
+                    return result.FirstOrDefault();
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
     }

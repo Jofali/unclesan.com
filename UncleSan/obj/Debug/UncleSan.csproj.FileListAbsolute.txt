@@ -26,3 +26,5 @@ J:\asp.netmvc\UncleSan\UncleSan\obj\Debug\UncleSan.csprojResolveAssemblyReferenc
 J:\asp.netmvc\UncleSan\UncleSan\obj\Debug\UncleSan.csproj.CoreCompileInputs.cache
 J:\asp.netmvc\UncleSan\UncleSan\obj\Debug\UncleSan.dll
 J:\asp.netmvc\UncleSan\UncleSan\obj\Debug\UncleSan.pdb
+J:\asp.netmvc\UncleSan\UncleSan\bin\Dapper.dll
+J:\asp.netmvc\UncleSan\UncleSan\bin\Dapper.xml

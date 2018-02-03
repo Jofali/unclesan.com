@@ -16,6 +16,8 @@ namespace UncleSan.Controllers
         {
             SqlHelper ins = new SqlHelper();
             ViewBag.Url = ins.GetUrl("js");
+            ViewBag.webpack = ins.GetUrl("webpack");
+            ViewBag.node = ins.GetUrl("node");
             return View();
         }
     }

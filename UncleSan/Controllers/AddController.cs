@@ -25,7 +25,7 @@ namespace UncleSan.Controllers
             {
                 return false;
             }
-                Success = Model.Password == usering.Password.Replace(" ", "");
+            Success = Model.Password == usering.Password.Replace(" ", "");
             return Model.Password == usering.Password.Replace(" ", "");
         }
 
