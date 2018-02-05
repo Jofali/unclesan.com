@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "weblist";
+}
+
+
+<div class="container">
+    <h2 style="text-align:center;">插入信息</h2>
+    <div class="input-group">
+        <span class="input-group-addon" id="Name">Name</span>
+        <input type="text" class="form-control" placeholder="Name" aria-describedby="Name" value="test">
+    </div>
+    <div class="input-group" style="padding:20px 0;">
+        <span class="input-group-addon" id="Link">Link</span>
+        <input type="text" class="form-control" placeholder="Link" aria-describedby="Link" value="www.unclesan.com">
+    </div>
+    <div class="">
+        <span style="border: 1px solid #ccc;padding:6px 12px;background:#eee;border-right: 0;margin-right:-5px;" id="Slot">Slot</span>
+        <div class="dropdown btn-group">
+            <button class="btn btn-default dropdown-toggle"
+                    type="button" id="dropdownMenu2"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <span style="padding: 10px 20px;">js</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu drop-slot" aria-labelledby="dropdownMenu2">
+                <li><a>js</a></li>
+                <li><a>csharp</a></li>
+                <li><a>aspnet</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a>node</a></li>
+                <li><a>webpack</a></li>
+            </ul>
+        </div>
+    </div>
+    <button class="btn btn-primary" style="margin:20px 0;width:200px;" id="add">添加</button>
+</div>
+<script>
+    $(function () {
+        $(".drop-slot li").click(function () {
+            console.log(1)
+            $("#dropdownMenu2 span").eq(0).text($(this).find("a").text())
+        })
+        $("#add").click(function () {
+            $.ajax({
+                url: '/Add/InsertData',
+                dataType: 'json',
+                type: 'post',
+                data: {
+                    Name: $('.form-control').eq(0).val(),
+                    Link: $('.form-control').eq(1).val(),
+                    Slot: $("#dropdownMenu2 span").eq(0).text()
+                },
+                success: function (data) {
+                    data == "1" ? alert("添加成功") : alert("添加失败")
+                },
+                error: function (err1, err2, err3) {
+                    alert("添加失败")
+                }
+            })
+        })
+    })
+</script>

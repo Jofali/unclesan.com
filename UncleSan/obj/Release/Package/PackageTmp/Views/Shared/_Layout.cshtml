@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    <img class="img-responsive" src="~/Content/logo.png" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/js">JavaScript</a>
+                    </li>
+                    <li>
+                        <a href="/csharp">C#</a>
+                    </li>
+                    <li>
+                        <a href="/aspnet">ASP.NET</a>
+                    </li>
+                    <li>
+                        <a href="/add">登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin-bottom:50px;">
+        @RenderBody()
+    </div>
+    
+    <div class="container body-content">
+        <footer style="text-align:center;">
+            <p><a target="_blank" href="http://www.miitbeian.gov.cn/" style="padding-right:25px;">粤ICP备18009642号</a>版权所有 &copy; @DateTime.Now.Year 圣光永存</p>
+        </footer>
+    </div>
+
+</body>
+</html>

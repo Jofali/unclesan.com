@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "index";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in ViewBag.Url)
+        {
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item">@item.Name</li>
+                    <li class="list-group-item" style="overflow-x:auto;">
+                        <a href="@item.Link">@item.Link</a>
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>
